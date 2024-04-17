@@ -1,14 +1,48 @@
-# Repositório para o aplicativo TUNI 
+# TUNI
 
-## Proposta do Produto
-  O objetivo do TUNI é fornecer uma ferramenta *_mobile_* que auxilie motoristas e estudantes na gestão do transporte até a universidade, e permita o acompanhamento das rotas e horários, comunicação entre alunos e motoristas, além de notificações relevantes para todos os envolvidos.
+## Descrição
+TUNI é uma aplicação móvel desenvolvida usando React Native e Expo.
 
-### Descrição do Sistema
-  O TUNI é um aplicativo de gerenciamento de transporte universitário disponível para as plataformas *_Android_* e *_iOS_*.
+## Pré-requisitos
+Certifique-se de ter o seguinte software instalado em sua máquina:
 
-### Modelo conteitual
+- Node.js (https://nodejs.org/)
+- npm (geralmente vem com o Node.js)
+- Expo CLI (você pode instalá-lo executando `npm install -g expo-cli`)
 
-## Interface
-  Com base na arquitetura do sistema, as telas que compõem a interface do aplicativo foram criadas na plataforma Figma. Como guia, foram utilizadas as diretrizes do *_Material Design_*, da *_Google_*. A Figura 3 mostra as telas introdutórias do aplicativo, compostas pela *_Splash Screen_*, apresentada ao usuário enquanto o aplicativo é carregado, pela tela de *_Sign In_* e pela tela de *_Sign Up_*, apresentada somente quando o usuário não possui *_login_* cadastrado.
+## Como Baixar e Rodar a Aplicação
+Siga estas etapas para baixar e rodar o aplicativo em seu dispositivo ou emulador:
+
+1. Clone este repositório para o seu computador usando `git clone https://github.com/fernandesraquel/tuniapp.git`
+ 
+2. Navegue até o diretório do projeto: `cd tuniapp`
+
+3. Inicie o servidor Expo para executar o aplicativo: `npx expo start`
+
+4. O Expo DevTools será aberto em seu navegador. Você pode escanear o código QR exibido na página usando o aplicativo Expo Go no seu dispositivo móvel (disponível na App Store ou Google Play) ou pressionar `w` no terminal para abrir o aplicativo no emulador Android ou `i` para abrir no emulador iOS.
+
+5. Aguarde enquanto o aplicativo é carregado. Uma vez carregado, você poderá interagir com o aplicativo em seu dispositivo ou emulador.
+
+## Contribuindo
+Se você quiser contribuir com este projeto, por favor, siga estas etapas:
+
+1. Faça um fork do repositório
+2. Crie uma nova branch (`git checkout -b feature/nova-feature`)
+3. Faça commit das suas alterações (`git commit -am 'Adicione uma nova feature'`)
+4. Faça push para a branch (`git push origin feature/nova-feature`)
+5. Crie um novo Pull Request
+
+## Licença
+Este projeto está licenciado sob a MIT License. Consulte o arquivo `LICENSE` para obter detalhes.
+
+
+
+
+
+
+
+
+
+
 
 
