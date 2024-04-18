@@ -1,7 +1,5 @@
-import SignInScreen from './SignIn';
-import SignUpScreen from './SignUp';
+import SplashScreen from './Splash';
 
 export {
-  SignInScreen,
-  SignUpScreen
+  SplashScreen,
 }
