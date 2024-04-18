@@ -8,12 +8,11 @@ Certifique-se de ter o seguinte software instalado em sua máquina:
 
 - Node.js (https://nodejs.org/)
 - npm (geralmente vem com o Node.js)
-- Expo CLI (você pode instalá-lo executando `npm install -g expo-cli`)
 
 ## Como Baixar e Rodar a Aplicação
 Siga estas etapas para baixar e rodar o aplicativo em seu dispositivo ou emulador:
 
-1. Clone este repositório para o seu computador usando `git clone https://github.com/fernandesraquel/tuniapp.git`
+1. Clone este repositório usando: `git clone https://github.com/fernandesraquel/tuniapp.git`
  
 2. Navegue até o diretório do projeto: `cd tuniapp`
 
