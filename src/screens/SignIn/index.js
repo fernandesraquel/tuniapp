@@ -11,13 +11,13 @@ export default function SignInScreen() {
     setShowPassword(!showPassword);
   };
   const handleForgotPassword = () => {
-    navigation.navigate('ResetPassword');
+    
   };
   const handleSignUp = () => {
-    navigation.navigate('SignUp');
+    
   };
   const handleLogin = () => {
-    navigation.navigate('Home');
+    
   };
 
   return (
