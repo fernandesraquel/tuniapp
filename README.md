@@ -33,15 +33,3 @@ Se você quiser contribuir com este projeto, por favor, siga estas etapas:
 
 ## Licença
 Este projeto está licenciado sob a MIT License. Consulte o arquivo `LICENSE` para obter detalhes.
-
-
-
-
-
-
-
-
-
-
-
-
