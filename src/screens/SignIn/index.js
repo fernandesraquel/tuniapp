@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -14,7 +14,7 @@ export default function SignInScreen() {
     
   };
   const handleSignUp = () => {
-    
+    navigation.navigate('SignUp');
   };
   const handleLogin = () => {
     
@@ -28,41 +28,40 @@ export default function SignInScreen() {
       </View>
 
       <View style={styles.containerForm}>
-        <TextInput
-          style={styles.input}
-          placeholder="Email"
-          placeholderTextColor="#aaaaaa"
-          keyboardType="email-address"
-          autoCapitalize="none"
-          autoCorrect={false}
-        />
-
-        <View style={styles.passwordInputContainer}>
+        <ScrollView showsVerticalScrollIndicator={false}>
           <TextInput
-            style={styles.passwordInput}
-            placeholder="Senha"
-            placeholderTextColor="#aaaaaa"
-            secureTextEntry={!showPassword}
+            style={styles.input}
+            placeholder="Usuário"
+            placeholderTextColor="#B4B4B8"
+            autoCorrect={false}
           />
-          <TouchableOpacity style={styles.toggleButton} onPress={togglePasswordVisibility}>
-            <MaterialCommunityIcons name={showPassword ? 'eye-off' : 'eye'} size={24} color="#aaaaaa" />
-          </TouchableOpacity>
-        </View>
+          <View style={styles.passwordInputContainer}>
+            <TextInput
+              style={styles.passwordInput}
+              placeholder="Senha"
+              placeholderTextColor="#B4B4B8"
+              secureTextEntry={!showPassword}
+            />
+            <TouchableOpacity style={styles.toggleButton} onPress={togglePasswordVisibility}>
+              <MaterialCommunityIcons name={showPassword ? 'eye-off' : 'eye'} size={24} color="#B4B4B8" />
+            </TouchableOpacity>
+          </View>
 
-        <TouchableOpacity style={styles.forgotPassword} onPress={handleForgotPassword}>
-          <Text style={styles.forgotPasswordText}>Esqueceu sua senha?</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.button} onPress={handleLogin}>
-          <Text style={styles.buttonText}>Entrar</Text>
-        </TouchableOpacity>
-      
-        <View style={styles.signupContainer}>
-          <Text style={styles.signupText}>Não possui uma conta? </Text>
-          <TouchableOpacity onPress={handleSignUp}>
-            <Text style={styles.signupLink}>Cadastre-se</Text>
+          <TouchableOpacity style={styles.forgotPassword} onPress={handleForgotPassword}>
+            <Text style={styles.forgotPasswordText}>Esqueceu sua senha?</Text>
           </TouchableOpacity>
-        </View>
+
+          <TouchableOpacity style={styles.button} onPress={handleLogin}>
+            <Text style={styles.buttonText}>Entrar</Text>
+          </TouchableOpacity>
+          
+          <View style={styles.signupContainer}>
+            <Text style={styles.signupText}>Não possui uma conta? </Text>
+            <TouchableOpacity onPress={handleSignUp}>
+              <Text style={styles.signupLink}>Cadastre-se</Text>
+            </TouchableOpacity>
+          </View>
+        </ScrollView>
       </View>
     </View>
   );
@@ -75,7 +74,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   containerTitle: {
-    flex: 1,
     backgroundColor: '#4051b2',
     paddingStart:20,
     paddingVertical: 60,
@@ -144,7 +142,7 @@ const styles = StyleSheet.create({
   },
   signupText: {
     fontSize: 16,
-    color: '#666',
+    color: '#B4B4B8',
     marginTop: 20,
   },
   signupLink: {
