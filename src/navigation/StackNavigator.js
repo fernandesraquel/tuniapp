@@ -4,7 +4,10 @@ import {
   SplashScreen,
   SignInScreen,
   SignUpScreen,
+  ResetPasswordScreen,
+  NewPasswordScreen,
 } from '../screens';
+import TabNavigator from './TabNavigator';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +28,31 @@ export default function StackNavigator() {
           },
         }}
       />
+      <Stack.Screen 
+        name="ResetPassword" 
+        component={ResetPasswordScreen} 
+        options={{
+          headerTitle: '',
+          headerTintColor: '#fff',
+          headerShadowVisible: false,
+          headerStyle: {
+            backgroundColor: '#4051b2', 
+          },
+        }}
+      />
+      <Stack.Screen 
+        name="NewPassword" 
+        component={NewPasswordScreen} 
+        options={{
+          headerTitle: '',
+          headerTintColor: '#fff',
+          headerShadowVisible: false,
+          headerStyle: {
+            backgroundColor: '#4051b2', 
+          },
+        }}
+      />
+      <Stack.Screen name="Home" component={TabNavigator} options={{headerShown: false}} />
     </Stack.Navigator>
   );
 }

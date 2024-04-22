@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView, Alert } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -11,13 +11,13 @@ export default function SignInScreen() {
     setShowPassword(!showPassword);
   };
   const handleForgotPassword = () => {
-    
+    navigation.navigate('ResetPassword');
   };
   const handleSignUp = () => {
     navigation.navigate('SignUp');
   };
   const handleLogin = () => {
-    
+    navigation.navigate('Home');
   };
 
   return (

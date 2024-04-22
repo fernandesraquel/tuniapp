@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView, Alert } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import { useForm, Controller } from "react-hook-form";
-import { MaterialIcons } from '@expo/vector-icons';
 
 export default function SignUpScreen() {
   const navigation = useNavigation();
@@ -14,7 +13,6 @@ export default function SignUpScreen() {
   const { control, handleSubmit, formState: { errors } } = useForm({
     
   })
-  const [isSuccessMessageVisible, setIsSuccessMessageVisible] = useState(false);
 
   const options = [
     { label: 'Estudante', value: 'Estudante' },
@@ -24,23 +22,18 @@ export default function SignUpScreen() {
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
   };
+
   const handleSignUp = async (data) => {
     console.log(data)
     const email = data.email;
     const usernameFromEmail = email.substring(0, email.indexOf('@'));
-    setUsername(usernameFromEmail);
-    
-    setIsSuccessMessageVisible(true);
-    
-  };
+    setUsername(usernameFromEmail);    
+    Alert.alert('Cadastro realizado com sucesso', `Seu usuário de acesso é: ${usernameFromEmail}`);
+
+};
 
   return (
     <View style={styles.container}>
-      {isSuccessMessageVisible && (
-        <View style={styles.successMessage}>
-          <Text style={styles.successMessageText}>Cadastro realizado com sucesso. Seu usuário de acesso é {username}</Text>
-        </View>
-      )}
       <View style={styles.imageContainer}>
       <Controller
           name="userImage"
@@ -144,7 +137,7 @@ export default function SignUpScreen() {
                     ]}
                     onPress={() => field.onChange(option.value)}
                   >
-                    <Text style={{ color: field.value === option.value ? '#000' : '#B4B4B8'}}>{option.label}</Text>
+                    <Text style={{ color: field.value === option.value ? '#fff' : '#B4B4B8' }}>{option.label}</Text>
                   </TouchableOpacity>
                 ))}
               </View>
@@ -167,7 +160,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center'
   },
   successMessage: {
-    
     marginTop: 20,
     paddingHorizontal: 20,
     backgroundColor: '#fff',
@@ -247,7 +239,8 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     paddingHorizontal: 5,
     paddingVertical: 5,
-    marginBottom: 15
+    marginBottom: 15,
+    backgroundColor: '#f2f2f2',
   },
   option: {
     flex: 1,
@@ -256,7 +249,7 @@ const styles = StyleSheet.create({
   },
   selectedOption: {
     borderRadius: 5,
-    backgroundColor: '#f2f2f2',
+    backgroundColor: '#4051b2',
     paddingVertical: 10,
   },
 });
