@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, ScrollView, Alert } from 'react-native';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import { useForm, Controller } from "react-hook-form";
 
 import { Appbar, Avatar } from 'react-native-paper';
 
@@ -16,20 +14,20 @@ export default function HomeScreen() {
   return (
     <View style={{ flex: 1 }}>
       <Appbar.Header style={{ backgroundColor: '#4051b2' }}>
-        {/* Conteúdo à esquerda */}
+        
         <View style={{ flexDirection: 'row', alignItems: 'center'}}>
           <Avatar.Image size={40} source={{ uri: userPhotoUrl }} />
           <Text style={{ marginLeft: 10, color: '#fff' }}>{userName}</Text>
         </View>
 
-        {/* Ícone do calendário à direita */}
+        
         <View style={{ position: 'absolute', right: 0 }}>
           <Appbar.Action
             icon={({ size }) => (
               <MaterialCommunityIcons name="calendar" color='#fff' size={size} />
             )}
             onPress={() => {
-              // Adicione aqui a lógica para lidar com o pressionamento do ícone do calendário
+              
               console.log('Ícone do calendário pressionado');
             }}
           />
